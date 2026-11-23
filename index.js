@@ -31,7 +31,7 @@ app.post(WEBHOOK_PATH, async (req, res) => {
   console.log('Webhook recebido:', {
     messageId,
     topic,
-    eventKeys: Object.keys(event || {})
+    event: JSON.stringify(event, null, 2)  
   });
 
   try {
