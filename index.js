@@ -260,6 +260,19 @@ app.get('/health', (req, res) => {
 });
 
 app.post(WEBHOOK_PATH, async (req, res) => {
+
+  console.log('========== WEBHOOK RECEBIDO ==========');
+
+  console.log('Content-Type:', req.headers['content-type']);
+
+  console.log('Tipo do body:', typeof req.body);
+
+  console.log('Campos recebidos:', Object.keys(req.body || {}));
+
+  console.log('Body completo:', JSON.stringify(req.body, null, 2));
+
+  console.log('======================================');
+
   const { messageId, topic, event } = req.body || {};
 
   console.log('Webhook recebido:', {
