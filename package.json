@@ -1,7 +1,13 @@
 {
+  "name": "chegou-nota",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node index.js", "check": "node --check index.js" },
   "dependencies": {
-    "@slack/web-api": "^8.5.0",
-    "dotenv": "^18.0.10",
-    "express": "^5.3.0"
-  }
+    "@slack/web-api": "^7.0.0",
+    "better-sqlite3": "^12.0.0",
+    "dotenv": "^17.0.0",
+    "express": "^5.0.0"
+  },
+  "engines": { "node": ">=20" }
 }
